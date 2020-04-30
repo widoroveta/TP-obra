@@ -11,6 +11,7 @@ public Arquitecto(String nombre,String dni,int telefono, int numeroMatricula)
     this.numeroMatricula=numeroMatricula;
 }
 
+
     @Override
     public int getTelefono() {
         return super.getTelefono();
@@ -55,5 +56,19 @@ public Arquitecto(String nombre,String dni,int telefono, int numeroMatricula)
     public String CrearPLanos ()
     {
         return "Creando mi próximo plano";
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "\nArquitecto{" +
+                "numeroMatricula=" + numeroMatricula +
+                "} " + super.toString();
+    }
+
+    @Override
+    public Empleados clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

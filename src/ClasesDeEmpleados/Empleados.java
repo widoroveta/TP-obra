@@ -41,4 +41,30 @@ public class Empleados  {
     public String getDni() {
         return dni;
     }
+
+
+   public Empleados getEmpleados(){
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "\nEmpleados{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", telefono=" + telefono +
+                ", salario=" + salario +
+                '}';
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+
+
+    @Override
+    protected Empleados clone() throws CloneNotSupportedException {
+        return this;
+    }
 }

@@ -58,4 +58,16 @@ public class Obrero extends Empleados implements Construccion {
     public String Construir() {
         return "Soy obrero y construyo";
     }
+
+    @Override
+    public Empleados clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "\nObrero{" +
+                "edad=" + edad +
+                "} " + super.toString();
+    }
 }

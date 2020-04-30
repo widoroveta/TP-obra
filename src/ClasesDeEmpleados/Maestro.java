@@ -57,4 +57,16 @@ public class Maestro extends Empleados implements Construccion {
     public String Construir() {
         return "Soy maestro y superviso las construcciones";
     }
+
+    @Override
+    public String toString() {
+        return "\nMaestro{" +
+                "edad=" + edad +
+                "} " + super.toString();
+    }
+
+    @Override
+    public Empleados clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }
