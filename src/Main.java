@@ -25,7 +25,7 @@ public class Main {
         Obrero o9 = new Obrero("ricardo", "56465645", 4725545, 36);
         Obrero o10 = new Obrero("ricardo", "56465645", 4725545, 36);
         Obrero o11 = new Obrero("ruben", "5646645", 4729875, 47);
-        Obrero o12= new Obrero("dario", "564464645", 4565545, 65);
+        Obrero o12 = new Obrero("dario", "564464645", 4565545, 65);
         //Maestros
         Maestro m1 = new Maestro("miguel", "22323232", 4175546, 50);
         Maestro m2 = new Maestro("natanael", "15455456", 4756546, 60);
@@ -40,7 +40,7 @@ public class Main {
         Arquitecto a2 = new Arquitecto("enrique", "54654545", 6464655, 54564654);
         Arquitecto a3 = new Arquitecto("luis", "46464333", 5454545, 546546);
         //listado de la empresa
-        List<Empleados> listadoEmpresa= new ArrayList<>();
+        List<Empleados> listadoEmpresa = new ArrayList<>();
         listadoEmpresa.add(o1);
         listadoEmpresa.add(o2);
         listadoEmpresa.add(o3);
@@ -65,8 +65,8 @@ public class Main {
         listadoEmpresa.add(a2);
         listadoEmpresa.add(a3);
         //Obras
-            //Lista De obra
-        List<Empleados> Edomestica1 =new ArrayList<>();
+        //Lista De obra
+        List<Empleados> Edomestica1 = new ArrayList<>();
         Edomestica1.add(o1);
         Edomestica1.add(o3);
         Edomestica1.add(o4);
@@ -74,8 +74,8 @@ public class Main {
         Edomestica1.add(a1);
         Edomestica1.add(m2);
         Edomestica1.add(m8);
-        Domestica domestica =new Domestica("colon 9700",100,45,45,Edomestica1,4);
-        List<Empleados> Ecomercio =new ArrayList<>();
+        Domestica domestica = new Domestica("colon 9700", 100, 45, 45, Edomestica1, 4);
+        List<Empleados> Ecomercio = new ArrayList<>();
         Ecomercio.add(o1);
         Ecomercio.add(o5);
         Ecomercio.add(o7);
@@ -83,7 +83,7 @@ public class Main {
         Ecomercio.add(o9);
         Ecomercio.add(a2);
         Ecomercio.add(m2);
-        Comercio comercio=new Comercio("alem 4321",50,75,80,Ecomercio,"lo de toto","kiosko");
+        Comercio comercio = new Comercio("alem 4321", 50, 75, 80, Ecomercio, "lo de toto", "kiosko");
         List<Empleados> EHotel = new ArrayList<>();
         EHotel.add(o2);
         EHotel.add(o12);
@@ -92,50 +92,52 @@ public class Main {
         EHotel.add(o4);
         EHotel.add(m6);
         EHotel.add(a3);
-        Hotel hotel=new Hotel ("sarmiento 2502",100,1000,200,EHotel,"san remo",9);
+        Hotel hotel = new Hotel("sarmiento 2502", 100, 1000, 200, EHotel, "san remo", 9);
         //Empresa
-            //listado de obras
-        List<Obra> listadoDeObras =new ArrayList<>();
-        listadoDeObras.add((Obra)domestica);
-        listadoDeObras.add((Obra)comercio);
-        listadoDeObras.add((Obra) hotel );
+         //listado de obras
+        List<Obra> listadoDeObras = new ArrayList<>();
+        listadoDeObras.add((Obra) domestica);
+        listadoDeObras.add((Obra) comercio);
+        listadoDeObras.add((Obra) hotel);
 
-        Empresa Atlas = new Empresa("atlas",listadoEmpresa,listadoDeObras);
+        Empresa Atlas = new Empresa("atlas", listadoEmpresa, listadoDeObras);
+
+        //front-end
         System.out.println("Que desea hacer?");
         System.out.println("\n1)ver acciones de cada tipo de empleados");
         System.out.println("\n2)Ver la empresa");
         System.out.println("\n3)obras y su costo");
 
-        int opcion=0;
+        int opcion = 0;
 
         Scanner scan = new Scanner(System.in);
 
 
-            opcion=scan.nextInt();
-            switch (opcion){
-                case 1:
+        opcion = scan.nextInt();
+        switch (opcion) {
+            case 1:
 
-                    System.out.println(o1.toString());
-                    System.out.println("\n"+o1.Construir());
-                    System.out.println(m1.toString());
-                    System.out.println("\n"+m1.Construir());
-                    System.out.println(a1.toString());
-                    System.out.println("\n"+a1.CrearPLanos());
+                System.out.println(o1.toString());
+                System.out.println("\n" + o1.Construir());
+                System.out.println(m1.toString());
+                System.out.println("\n" + m1.Construir());
+                System.out.println(a1.toString());
+                System.out.println("\n" + a1.CrearPLanos());
 
-                    break;
-                case 2:
+                break;
+            case 2:
                 System.out.println(Atlas.toString());
                 break;
-                case 3:
-                    for (int i=0;i<listadoDeObras.size();i++) {
+            case 3:
+                for (int i = 0; i < listadoDeObras.size(); i++) {
 
-                        System.out.println(listadoDeObras.get(i).toString()+"\nCosto: "+listadoDeObras.get(i).CalcularCosto());
+                    System.out.println(listadoDeObras.get(i).toString() + "\nCosto: " + listadoDeObras.get(i).CalcularCosto());
 
-                    }
-                    break;
-                    }
+                }
+                break;
         }
-
-
     }
+
+
+}
 
